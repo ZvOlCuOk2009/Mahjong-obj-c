@@ -17,6 +17,8 @@
 		22DBFE2D2D66793C005A9772 /* Mahjong_obj_cTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DBFE2C2D66793C005A9772 /* Mahjong_obj_cTests.m */; };
 		22DBFE372D66793C005A9772 /* Mahjong_obj_cUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DBFE362D66793C005A9772 /* Mahjong_obj_cUITests.m */; };
 		22DBFE392D66793C005A9772 /* Mahjong_obj_cUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DBFE382D66793C005A9772 /* Mahjong_obj_cUITestsLaunchTests.m */; };
+		22DBFE472D667D61005A9772 /* GeometryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DBFE462D667D61005A9772 /* GeometryHelper.m */; };
+		22DBFE4A2D668465005A9772 /* TileViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DBFE492D668465005A9772 /* TileViewHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		22DBFE322D66793C005A9772 /* Mahjong obj-cUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mahjong obj-cUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DBFE362D66793C005A9772 /* Mahjong_obj_cUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mahjong_obj_cUITests.m; sourceTree = "<group>"; };
 		22DBFE382D66793C005A9772 /* Mahjong_obj_cUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mahjong_obj_cUITestsLaunchTests.m; sourceTree = "<group>"; };
+		22DBFE452D667D61005A9772 /* GeometryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryHelper.h; sourceTree = "<group>"; };
+		22DBFE462D667D61005A9772 /* GeometryHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeometryHelper.m; sourceTree = "<group>"; };
+		22DBFE482D668465005A9772 /* TileViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileViewHelper.h; sourceTree = "<group>"; };
+		22DBFE492D668465005A9772 /* TileViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileViewHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				22DBFE142D667938005A9772 /* SceneDelegate.m */,
 				22DBFE162D667938005A9772 /* ViewController.h */,
 				22DBFE172D667938005A9772 /* ViewController.m */,
+				22DBFE452D667D61005A9772 /* GeometryHelper.h */,
+				22DBFE462D667D61005A9772 /* GeometryHelper.m */,
+				22DBFE482D668465005A9772 /* TileViewHelper.h */,
+				22DBFE492D668465005A9772 /* TileViewHelper.m */,
 				22DBFE192D667938005A9772 /* Main.storyboard */,
 				22DBFE1C2D66793B005A9772 /* Assets.xcassets */,
 				22DBFE1E2D66793B005A9772 /* LaunchScreen.storyboard */,
@@ -266,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22DBFE4A2D668465005A9772 /* TileViewHelper.m in Sources */,
 				22DBFE182D667938005A9772 /* ViewController.m in Sources */,
+				22DBFE472D667D61005A9772 /* GeometryHelper.m in Sources */,
 				22DBFE122D667938005A9772 /* AppDelegate.m in Sources */,
 				22DBFE232D66793B005A9772 /* main.m in Sources */,
 				22DBFE152D667938005A9772 /* SceneDelegate.m in Sources */,
