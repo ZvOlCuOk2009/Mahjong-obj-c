@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GeometryHelper : NSObject
 
++ (void)configArrayRandomNumbers:(NSMutableArray *)randomNumbers
+                      subNumbers:(NSMutableArray *)subNumbers;
 + (CGRect)calculateTileFrame:(CGRect)frame;
 + (CGFloat)retreatFromFrame;
 

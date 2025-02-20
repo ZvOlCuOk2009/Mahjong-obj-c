@@ -23,41 +23,16 @@ NSMutableArray *randomNumbers;
 NSMutableArray *subNumbers;
 UIView *firstTile;
 UIView *secondTile;
-int staticNumber = 10;
 NSInteger firstTap;
 NSInteger secondTap;
 CGRect firsRect;
 CGRect secondRect;
-CGFloat widthBorder = 30;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     randomNumbers = [NSMutableArray new];
-    [self configArrayRandomNumbers:randomNumbers subNumbers:subNumbers];
+    [GeometryHelper configArrayRandomNumbers:randomNumbers subNumbers:subNumbers];
     [self addTilesToScene];
-}
-
-- (void)configArrayRandomNumbers:(NSMutableArray *)randomNumbers
-                          subNumbers:(NSMutableArray *)subNumbers;
-{
-    subNumbers = [NSMutableArray new];
-    for (int i = 0; i < staticNumber; i++) {
-        NSNumber *number = [NSNumber numberWithInteger:(arc4random_uniform(staticNumber))];
-        if ([randomNumbers containsObject:number]) {
-            i = i - 1;
-            if ([subNumbers containsObject:number]) {
-                i = i - i;
-            } else {
-                [subNumbers addObject:number];
-            }
-        } else {
-            [randomNumbers addObject:number];
-        }
-        if ([randomNumbers count] == staticNumber && [subNumbers count] == staticNumber) {
-            [randomNumbers addObjectsFromArray:subNumbers];
-            return;
-        }
-    }
 }
 
 - (void)addTilesToScene
@@ -174,7 +149,7 @@ CGFloat widthBorder = 30;
     }
     [randomNumbers removeAllObjects];
     [subNumbers removeAllObjects];
-    [self configArrayRandomNumbers:randomNumbers subNumbers:subNumbers];
+    [GeometryHelper configArrayRandomNumbers:randomNumbers subNumbers:subNumbers];
     [self addTilesToScene];
 }
 
