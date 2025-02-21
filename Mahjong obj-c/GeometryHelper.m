@@ -20,9 +20,11 @@ static int staticNumber = 10;
     for (int i = 0; i < staticNumber; i++) {
         NSNumber *number = [NSNumber numberWithInteger:(arc4random_uniform(staticNumber))];
         if ([randomNumbers containsObject:number]) {
-            i = i - 1;
+//            i = i - 1;
+            i--;
             if ([subNumbers containsObject:number]) {
-                i = i - i;
+//                i = i - i;
+                i--;
             } else {
                 [subNumbers addObject:number];
             }
@@ -36,7 +38,7 @@ static int staticNumber = 10;
     }
 }
 
-+ (CGRect)calculateTileFrame:(CGRect)frameView
++ (CGRect)calculateFrameForTile:(CGRect)frameView
 {
     return CGRectMake(widthBorder, widthBorder, [self calculateWidthForFrame:frameView], [self calculateHeightForFrame:frameView]);
 }

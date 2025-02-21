@@ -9,8 +9,8 @@
 
 @implementation TileViewHelper
 
-+ (UIView *)createTileView:(int)i number:(NSNumber *)number rect:(CGRect)rect
-                   withX:(CGFloat)x withY:(CGFloat)y
++ (UIView *)createTileViewWithNumber:(NSNumber *)number rect:(CGRect)rect
+                               withX:(CGFloat)x withY:(CGFloat)y
 {
 
     UIView *tileView = [[UIView alloc] init];

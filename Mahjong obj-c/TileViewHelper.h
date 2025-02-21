@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TileViewHelper : NSObject
 
-+ (UIView *)createTileView:(int)i number:(NSNumber *)number rect:(CGRect)rect
-                     withX:(CGFloat)x withY:(CGFloat)y;
++ (UIView *)createTileViewWithNumber:(NSNumber *)number rect:(CGRect)rect
+                               withX:(CGFloat)x withY:(CGFloat)y;
 
 @end
 

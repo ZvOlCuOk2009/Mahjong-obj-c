@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)configArrayRandomNumbers:(NSMutableArray *)randomNumbers
                       subNumbers:(NSMutableArray *)subNumbers;
-+ (CGRect)calculateTileFrame:(CGRect)frame;
++ (CGRect)calculateFrameForTile:(CGRect)frame;
 + (CGFloat)retreatFromFrame;
 
 @end

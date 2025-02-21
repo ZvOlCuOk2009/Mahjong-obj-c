@@ -25,8 +25,8 @@ UIView *firstTile;
 UIView *secondTile;
 NSInteger firstTap;
 NSInteger secondTap;
-CGRect firsRect;
-CGRect secondRect;
+CGRect firstRectangle;
+CGRect secondRectangle;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +37,7 @@ CGRect secondRect;
 
 - (void)addTilesToScene
 {
-    CGRect rectView = [GeometryHelper calculateTileFrame:self.view.frame];
+    CGRect rectView = [GeometryHelper calculateFrameForTile:self.view.frame];
     
     CGFloat x = 0.0;
     CGFloat y = 0.0;
@@ -58,11 +58,9 @@ CGRect secondRect;
             y = y;
         }
         
-        UIView *tileView = [TileViewHelper createTileView:i
-                                                   number:[randomNumbers objectAtIndex:i]
-                                                     rect:rectView
-                                                    withX:x withY:y];
-        
+        UIView *tileView = [TileViewHelper createTileViewWithNumber:[randomNumbers objectAtIndex:i]
+                                                               rect:rectView
+                                                              withX:x withY:y];
 
         UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]
                                                         initWithTarget:self
@@ -88,13 +86,13 @@ CGRect secondRect;
 - (void)logicForRemovingTiles:(UIView *)tileView touchView:(UIView *)touchView
 {
     CGRect zeroRect = CGRectMake(0, 0, 0, 0);
-    if (CGRectEqualToRect(firsRect, zeroRect)) {
-        firsRect = tileView.frame;
-    } else if (CGRectEqualToRect(firsRect, tileView.frame)) {
-        firsRect = tileView.frame;
+    if (CGRectEqualToRect(firstRectangle, zeroRect)) {
+        firstRectangle = tileView.frame;
+    } else if (CGRectEqualToRect(firstRectangle, tileView.frame)) {
+        firstRectangle = tileView.frame;
         return;
     } else {
-        firsRect = tileView.frame;
+        firstRectangle = tileView.frame;
     }
 
     NSString *tag = [NSString stringWithFormat:@"%li", (long)tileView.tag];
@@ -113,7 +111,7 @@ CGRect secondRect;
     if (firstTap == secondTap) {
         [firstTile removeFromSuperview];
         [secondTile removeFromSuperview];
-        firsRect = CGRectMake(0, 0, 0, 0);
+        firstRectangle = CGRectMake(0, 0, 0, 0);
         [self resetTaps];
         firstTile = nil;
         secondTile = nil;
@@ -123,9 +121,6 @@ CGRect secondRect;
         secondTile = nil;
         secondTap = 0;
     }
-
-    NSLog(@"oneTap %ld", (long)firstTap);
-    NSLog(@"twoTap %ld", (long)secondTap);
 }
 
 - (void)resetTaps
